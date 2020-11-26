@@ -14,7 +14,3 @@ class Sky extends Rectangle{
         }
     }
 }
-var sky = new Sky()
-setInterval(function(){
-    sky.move(16/1000)
-},16)

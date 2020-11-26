@@ -26,7 +26,7 @@ class Bird extends Rectangle{
         }
     }
     jump(){
-        this.ySpeed=-550;//小鸟向上跳跃的方法；
+        this.ySpeed=-400;//小鸟向上跳跃的方法；
     }
     startSwing(){
         if(this.timer){
@@ -43,7 +43,3 @@ class Bird extends Rectangle{
         this.timer = null;
     }
 }
-var bird = new Bird()
-setInterval(function(){
-    bird.move(16/1000)
-},16)

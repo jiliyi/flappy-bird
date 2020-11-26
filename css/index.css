@@ -43,17 +43,15 @@
 }
 .pipe{
     position: absolute;
-    left: 250px;
-    width: 52px;
 }
 .pipe.up{
-    bottom: 0;
-    height: 100px;
+   
+   
     background-image: url(../img/pipeUp.png);
 }
 .pipe.down{
-    top: 0;
-    height: 150px;
+   
+  
     background-image: url(../img/pipeDown.png);
     background-position: bottom;
 

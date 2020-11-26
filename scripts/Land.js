@@ -14,7 +14,4 @@ class Land extends Rectangle{
         }
     }
 }
-var land = new Land()
-setInterval(function(){
-    land.move(16/1000)
-},16)
+
