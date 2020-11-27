@@ -43,7 +43,18 @@ class Game{
     }
     //辅助函数，检测ab物体是否碰撞
     isCollision(a,b){
-        
+        let centerX1 = a.left + a.width/2;
+        let centerY1 = a.top + a.height/2;
+        let cneterX2 = b.left + b.width/2;
+        let centerY2 = b.top + b.height/2;
+        let disX = Math.abs(centerX1 - cneterX2);
+        let disY = Math.abs(centerY1 - centerY2);
+        let halfWidth = (a.width+b.width)/2;
+        let halfHeight = (a.height + b.height)/2
+        if(disX < halfWidth && disY < halfHeight){
+            return true
+        }
+        return false;
     }
     //判断游戏是否结束
     isGameOver(){
@@ -51,8 +62,14 @@ class Game{
             return true
         }
         for(let i = 0 ; i < this.producer.pair.length;i++){
-
+            let pair = this.producer.pair[i];
+            let upPipe = pair.upPipe;
+            let downPipe = pair.downPipe;
+            if(this.isCollision(this.bird,upPipe) || this.isCollision(this.bird,downPipe)){
+                return true;
+            }
         }
+        return false;
     }
     //注册关联键盘事件
     regEvent(){
